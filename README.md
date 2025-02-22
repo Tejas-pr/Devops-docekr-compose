@@ -16,9 +16,12 @@ npm run build
 npm run start
 
 ## doceker installation
-
-
-
+ - Install docker locally
+ - Start postgreh
+    - docker run -e POSTGRES_PASSWORD=password -d -p 5432:5432 postgres
+ - Build the image - `docker build -t user-project .`
+ - Start the image - `docker run -p 3000:3000 user-project`
 
 ## docker compose installtion setup
-
+ - Install the Docker & Docker Compose
+ - Run `docker-compose up`
