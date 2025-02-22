@@ -6,14 +6,6 @@ const app = express();
 
 app.use(express.json());
 
-app.get("/", async (req, res) => {
-    const user = await prismaClient.user.findMany();
-    res.json({
-        user,
-        message: "Get request"
-    });
-})
-
 app.post("/", async (req, res) => {
     await prismaClient.user.create({
         data: {
@@ -23,6 +15,14 @@ app.post("/", async (req, res) => {
     });
     res.json({
         message: "Post request"
+    });
+})
+
+app.get("/", async (req, res) => {
+    const user = await prismaClient.user.findMany();
+    res.json({
+        user,
+        message: "Get request"
     });
 })
 
