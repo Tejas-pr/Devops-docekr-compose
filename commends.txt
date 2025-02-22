@@ -1,0 +1,4 @@
+
+- to init prisma
+docker run -e POSTGRES_PASSWORD=mypostgress -d -p 5432:5432 postgres
+
