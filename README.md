@@ -16,7 +16,7 @@ npx prisma generate
 npm run build
 npm run start
 
-## doceker installation
+## docker installation
 
 - Install docker locally
 - Start a network
