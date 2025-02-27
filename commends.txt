@@ -1,4 +1,24 @@
 
 - to init prisma
 docker run -e POSTGRES_PASSWORD=mypostgress -d -p 5432:5432 postgres
+ssh -i C:\Users\tejas\Documents\WebDevolupment\ssh2.pem ubuntu@18.233.98.250
 
+https://github.com/100xdevs-cohort-3/ASG.git
+Week 28.2 | Autoscaling Groups - 1.25.30 min
+-----------------------------
+pm 2 or forever make sure the app is running continously in the server
+pm2 commends
+pm2 start --interpreter /home/ubuntu/.nvm/versions/node/v22.14.0/bin/bun bin.ts
+which bun
+pm2 list
+pm2 logs [id]
+-------------------- luanch instance - auto scaling group ----------------------
+- we will go this in luanch template
+#!/bin/bash
+cd ~/ASG
+npm i -g pm2
+export PATH=$PATH:/home/ubuntu/.nvm/versions/node/v22.14.0/bin/
+cd ASG
+git pull
+bun install
+pm2 start --interpreter /home/ubuntu/.nvm/versions/node/v22.14.0/bin/bun /home/ubuntu/ASG/bin.ts
